@@ -12,6 +12,9 @@
             out.print(str);
         }
     %>!</h1>
+    <form method="post" action="/master_main_page">
+        <p><input class="button" type="submit" name="Register" value="Добавить запись о визите клиента"></p>
+    </form>
     <a href="/logout">Выйти</a>
 </body>
 </html>

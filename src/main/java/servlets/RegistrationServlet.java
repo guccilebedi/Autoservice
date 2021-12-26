@@ -38,11 +38,11 @@ public class RegistrationServlet extends HttpServlet {
         final HttpSession session = request.getSession();
         if (nonNull(session)) { // проверка того, что пользователь авторизован
             if (session.getAttribute("role") == Role.MANAGER) { // проверка того, что регистрирующий - менеджер
+                if (request.getParameter("Register") != null) { // если нажата кнопка зарегистрировать
                 final String newUserFullName = request.getParameter("newUserFullName"); // получить введённые ФИО
                 final String newUserName = request.getParameter("newUserLogin"); // получить введённый логин
                 final String newUserPassword = request.getParameter("newUserPassword"); // получить введённый пароль
                 final String temp = request.getParameter("newUserRole"); // получить выбранную роль
-                if (request.getParameter("Register") != null) { // если нажата кнопка зарегистрировать
                     if (!newUserFullName.equals("") && !newUserName.equals("") && !newUserPassword.equals("") && !temp.equals("")) { // проверка на заполнение всех полей
                         final Role newUserRole;
                         if (temp.equals("manager")) {

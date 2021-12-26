@@ -15,6 +15,7 @@
     <form method="post" action="/manager_main_page">
         <p><input class="button" type="submit" name="Register" value="Зарегистрировать пользователя"></p>
         <p><input class="button" type="submit" name="Delete" value="Удалить учётную запись"></p>
+        <p><input class="button" type="submit" name="AddCustomer" value="Добавить запись о визите клиента к мастеру"></p>
     </form>
     <p><a href="/logout">Выйти</a></p>
 </body>

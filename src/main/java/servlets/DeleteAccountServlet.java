@@ -38,7 +38,7 @@ public class DeleteAccountServlet extends HttpServlet {
         if (nonNull(session)) { // проверка того, что пользователь авторизован
             if (session.getAttribute("role") == Role.MANAGER) { // проверка того, что регистрирующий - менеджер
                 final String userFullName = request.getParameter("userFullName"); // получить введённые ФИО
-                if (request.getParameter("Delete") != null) { // если нажата кнопка зарегистрировать
+                if (request.getParameter("Delete") != null) { // если нажата кнопка удалить
                     if (!userFullName.equals("")) { // проверка на заполнение всех полей
                         try {
                             Class.forName("org.postgresql.Driver");

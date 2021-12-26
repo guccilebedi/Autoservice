@@ -25,5 +25,18 @@ public class MasterMainPageServlet extends HttpServlet {
             request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
         }
     }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException { // метод post
+        final HttpSession session = request.getSession();
+        if (nonNull(session)) { // проверка того, что пользователь авторизован
+            if (session.getAttribute("role") == Role.MANAGER) { // если менеджер - перенаправить на кго главную страницу
+                request.getRequestDispatcher("/WEB-INF/view/manager_main_page.jsp").forward(request, response);
+            } else if (session.getAttribute("role") == Role.MASTER) { // если мастер - перенаправить на его на страницу добавления записи о визите клиента
+                request.getRequestDispatcher("/WEB-INF/view/master_add_customers_visit.jsp").forward(request, response);
+            }
+        } else { // иначе перенаправить на страницу входа
+            request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
+        }
+    }
 }
 

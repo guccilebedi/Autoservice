@@ -34,6 +34,8 @@ public class ManagerMainPageServlet extends HttpServlet {
                     request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
                 } else if (request.getParameter("Delete") != null) {
                     request.getRequestDispatcher("/WEB-INF/view/delete_account.jsp").forward(request, response);
+                } else if (request.getParameter("AddCustomer") != null) {
+                    request.getRequestDispatcher("/WEB-INF/view/manager_add_customers_visit.jsp").forward(request, response);
                 }
             } else if (session.getAttribute("role") == Role.MASTER) { // если мастер - перенаправить на его главную страницу
                 request.getRequestDispatcher("/WEB-INF/view/master_main_page.jsp").forward(request, response);
