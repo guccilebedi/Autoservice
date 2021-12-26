@@ -6,7 +6,7 @@
 <body>
     <div style="text-align: center;">
         <h1>Вход в систему</h1><br>
-        <form method="post" action="">
+        <form method="post" action="/login">
             <input type="text" required placeholder="Логин" name="login"><br>
             <input type="password" required placeholder="Пароль" name="password"><br><br>
             <%

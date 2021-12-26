@@ -4,10 +4,17 @@
     <title>Manager</title>
 </head>
 <body>
-<form action="" method="get">
-    <h1>Менеджер</h1>
-    <%= request.getParameter("msg")%>
-    <a href="/logout">Выйти</a>
-</form>
+    <h1>Добро пожаловать,
+    <%
+        session = request.getSession();
+        Object str = session.getAttribute("fullName");
+        if (str != null) {
+            out.print(str);
+        }
+    %>!</h1>
+    <form method="post" action="/manager_main_page">
+        <p><input class="button" type="submit" value="Зарегистрировать пользователя"></p>
+    </form>
+    <p><a href="/logout">Выйти</a></p>
 </body>
 </html>
