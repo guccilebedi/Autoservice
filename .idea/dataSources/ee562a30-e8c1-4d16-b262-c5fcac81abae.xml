@@ -790,11 +790,10 @@ false Zulu
     <database id="2" parent="1" name="autoservice">
       <ObjectId>16395</ObjectId>
       <Owner>autoservice</Owner>
-      <IntrospectionStateNumber>758</IntrospectionStateNumber>
+      <IntrospectionStateNumber>787</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|16396|16397|1
-sequence|table|16405|16406|1
-sequence|table|16414|16415|1
+      <Relations>sequence|table|24576|24577|1
+sequence|table|24585|24586|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -886,7 +885,7 @@ UC/10
 </Acl>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>759</IntrospectionStateNumber>
+      <IntrospectionStateNumber>788</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="22" parent="2" name="plpgsql">
@@ -986,129 +985,51 @@ UC/10
       <HandlerId>335</HandlerId>
       <Type>index</Type>
     </access-method>
-    <sequence id="34" parent="21" name="customers_visits_id_seq">
-      <ObjectId>16414</ObjectId>
+    <sequence id="34" parent="21" name="employees_id_seq">
+      <ObjectId>24576</ObjectId>
       <Owner>autoservice</Owner>
-      <StateNumber>745</StateNumber>
+      <StateNumber>781</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
-    <sequence id="35" parent="21" name="employees_id_seq">
-      <ObjectId>16396</ObjectId>
+    <sequence id="35" parent="21" name="users_id_seq">
+      <ObjectId>24585</ObjectId>
       <Owner>autoservice</Owner>
-      <StateNumber>743</StateNumber>
+      <StateNumber>786</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
-    <sequence id="36" parent="21" name="users_id_seq">
-      <ObjectId>16405</ObjectId>
+    <table id="36" parent="21" name="employees">
+      <ObjectId>24577</ObjectId>
       <Owner>autoservice</Owner>
-      <StateNumber>744</StateNumber>
-      <DataType>integer|0s</DataType>
-    </sequence>
-    <table id="37" parent="21" name="customers_visits">
-      <ObjectId>16415</ObjectId>
-      <Owner>autoservice</Owner>
-      <StateNumber>745</StateNumber>
+      <StateNumber>781</StateNumber>
     </table>
-    <table id="38" parent="21" name="employees">
-      <ObjectId>16397</ObjectId>
+    <table id="37" parent="21" name="users">
+      <ObjectId>24586</ObjectId>
       <Owner>autoservice</Owner>
-      <StateNumber>743</StateNumber>
+      <StateNumber>786</StateNumber>
     </table>
-    <table id="39" parent="21" name="users">
-      <ObjectId>16406</ObjectId>
-      <Owner>autoservice</Owner>
-      <StateNumber>744</StateNumber>
-    </table>
-    <column id="40" parent="37" name="id">
+    <column id="38" parent="36" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>745</StateNumber>
-      <DefaultExpression>nextval(&apos;customers_visits_id_seq&apos;::regclass)</DefaultExpression>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="41" parent="37" name="masters_id">
-      <Position>2</Position>
-      <DataType>numeric|0s</DataType>
-      <StateNumber>745</StateNumber>
-      <TypeId>1700</TypeId>
-    </column>
-    <column id="42" parent="37" name="full_name">
-      <Position>3</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>745</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="43" parent="37" name="car_make">
-      <Position>4</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>745</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="44" parent="37" name="car_model">
-      <Position>5</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>745</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="45" parent="37" name="licence_plate">
-      <Position>6</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>745</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="46" parent="37" name="visit_date">
-      <Position>7</Position>
-      <DataType>date|0s</DataType>
-      <StateNumber>745</StateNumber>
-      <TypeId>1082</TypeId>
-    </column>
-    <column id="47" parent="37" name="price">
-      <Position>8</Position>
-      <DataType>numeric|0s</DataType>
-      <StateNumber>745</StateNumber>
-      <TypeId>1700</TypeId>
-    </column>
-    <index id="48" parent="37" name="customers_visits_pkey">
-      <ObjectId>16421</ObjectId>
-      <StateNumber>745</StateNumber>
-      <ColNames>id</ColNames>
-      <Unique>1</Unique>
-      <Primary>1</Primary>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationIds>0</CollationIds>
-      <ClassIds>1978</ClassIds>
-    </index>
-    <key id="49" parent="37" name="customers_visits_pkey">
-      <ObjectId>16422</ObjectId>
-      <StateNumber>745</StateNumber>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>customers_visits_pkey</UnderlyingIndexName>
-    </key>
-    <column id="50" parent="38" name="id">
-      <Position>1</Position>
-      <DataType>integer|0s</DataType>
-      <NotNull>1</NotNull>
-      <StateNumber>743</StateNumber>
+      <StateNumber>781</StateNumber>
       <DefaultExpression>nextval(&apos;employees_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="51" parent="38" name="full_name">
+    <column id="39" parent="36" name="full_name">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>743</StateNumber>
+      <StateNumber>781</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="52" parent="38" name="role">
+    <column id="40" parent="36" name="role">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>743</StateNumber>
+      <StateNumber>781</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="53" parent="38" name="employees_pkey">
-      <ObjectId>16403</ObjectId>
-      <StateNumber>743</StateNumber>
+    <index id="41" parent="36" name="employees_pkey">
+      <ObjectId>24583</ObjectId>
+      <StateNumber>781</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1116,36 +1037,36 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="54" parent="38" name="employees_pkey">
-      <ObjectId>16404</ObjectId>
-      <StateNumber>743</StateNumber>
+    <key id="42" parent="36" name="employees_pkey">
+      <ObjectId>24584</ObjectId>
+      <StateNumber>781</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>employees_pkey</UnderlyingIndexName>
     </key>
-    <column id="55" parent="39" name="id">
+    <column id="43" parent="37" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>744</StateNumber>
+      <StateNumber>786</StateNumber>
       <DefaultExpression>nextval(&apos;users_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
-    <column id="56" parent="39" name="login">
+    <column id="44" parent="37" name="login">
       <Position>2</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>744</StateNumber>
+      <StateNumber>786</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="57" parent="39" name="password">
+    <column id="45" parent="37" name="password">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>744</StateNumber>
+      <StateNumber>786</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="58" parent="39" name="users_pkey">
-      <ObjectId>16412</ObjectId>
-      <StateNumber>744</StateNumber>
+    <index id="46" parent="37" name="users_pkey">
+      <ObjectId>24592</ObjectId>
+      <StateNumber>786</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1153,9 +1074,9 @@ UC/10
       <CollationIds>0</CollationIds>
       <ClassIds>1978</ClassIds>
     </index>
-    <key id="59" parent="39" name="users_pkey">
-      <ObjectId>16413</ObjectId>
-      <StateNumber>744</StateNumber>
+    <key id="47" parent="37" name="users_pkey">
+      <ObjectId>24593</ObjectId>
+      <StateNumber>786</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>users_pkey</UnderlyingIndexName>

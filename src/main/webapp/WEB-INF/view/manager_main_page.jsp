@@ -5,6 +5,15 @@
 </head>
 <body>
     <h1>Менеджер</h1>
-    <a href="/logout">Выйти</a>
+    <form method="post" action="/manager_main_page">
+        <p><input class="button" type="submit" value="Зарегистрировать пользователя"></p>
+    </form>
+    <%
+        Object str = request.getAttribute("Success");
+        if (str != null) {
+            out.print(str);
+        }
+    %>
+    <p><a href="/logout">Выйти</a></p>
 </body>
 </html>
