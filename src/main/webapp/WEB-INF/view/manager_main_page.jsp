@@ -17,6 +17,7 @@
         <p><input class="button" type="submit" name="Delete" value="Удалить учётную запись"></p>
         <p><input class="button" type="submit" name="AddCustomer" value="Добавить запись о визите клиента к мастеру"></p>
         <p><input class="button" type="submit" name="DeleteCustomer" value="Удалить запись о визите клиента к мастеру"></p>
+        <p><input class="button" type="submit" name="Show" value="Показать список записей о визитах клиентов к мастеру"></p>
     </form>
     <p><a href="/logout">Выйти</a></p>
 </body>

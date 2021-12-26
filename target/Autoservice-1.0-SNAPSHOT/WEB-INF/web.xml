@@ -66,4 +66,14 @@
         <servlet-name>DeleteCustomersVisitServlet</servlet-name>
         <url-pattern>/delete_customers_visit</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowCustomersServlet</servlet-name>
+        <servlet-class>servlets.ShowCustomersServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowCustomersServlet</servlet-name>
+        <url-pattern>/manager_show_customers</url-pattern>
+        <url-pattern>/master_show_customers</url-pattern>
+    </servlet-mapping>
 </web-app>

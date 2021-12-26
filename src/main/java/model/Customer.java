@@ -1,5 +1,7 @@
 package model;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
@@ -34,10 +36,7 @@ public class Customer extends User {
 
     @Override
     public String toString() {
-        return "Клиент " + fullName + " " +
-                carMake + " "+
-                carModel + " " +
-                date + " " +
-                price;
+        DateFormat formatter = new SimpleDateFormat("dd.MM.yyyy");
+        return "Имя клиента: " + fullName + " Марка автомобиля: " + carMake + " Модель автомобиля: " + carModel + " Гос. номер: " + licencePlate + " Дата визита: " + formatter.format(date) + " Итоговая цена: " + price + "\n";
     }
 }
