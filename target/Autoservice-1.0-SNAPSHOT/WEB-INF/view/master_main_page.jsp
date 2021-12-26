@@ -4,7 +4,14 @@
     <title>Master</title>
 </head>
 <body>
-    <h1>Мастер</h1>
+    <h1>Добро пожаловать,
+    <%
+        session = request.getSession();
+        Object str = session.getAttribute("fullName");
+        if (str != null) {
+            out.print(str);
+        }
+    %>!</h1>
     <a href="/logout">Выйти</a>
 </body>
 </html>
