@@ -21,12 +21,13 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>ManagerMainPageServlet</servlet-name>
-        <servlet-class>servlets.ManagerMainPageServlet</servlet-class>
+        <servlet-name>MainPageServlet</servlet-name>
+        <servlet-class>servlets.MainPageServlet</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>ManagerMainPageServlet</servlet-name>
+        <servlet-name>MainPageServlet</servlet-name>
         <url-pattern>/manager_main_page</url-pattern>
+        <url-pattern>/master_main_page</url-pattern>
     </servlet-mapping>
 
     <servlet>
@@ -45,15 +46,6 @@
     <servlet-mapping>
         <servlet-name>DeleteAccountServlet</servlet-name>
         <url-pattern>/delete_account</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-        <servlet-name>MasterMainPageServlet</servlet-name>
-        <servlet-class>servlets.MasterMainPageServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>MasterMainPageServlet</servlet-name>
-        <url-pattern>/master_main_page</url-pattern>
     </servlet-mapping>
 
     <servlet>
