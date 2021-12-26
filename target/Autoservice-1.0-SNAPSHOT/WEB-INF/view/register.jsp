@@ -21,7 +21,7 @@
                 out.print(str);
             }
         %>
-        <p><input class="button" type="submit" name="Back" value="Назад"><input class="button" type="submit" name="Register" value="Зарегистрировать"></p>
+        <p><input class="button" type="submit" name="Back" value="Назад"> <input class="button" type="submit" name="Register" value="Зарегистрировать"></p>
     </form>
 </div>
 </body>

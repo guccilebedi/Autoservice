@@ -39,6 +39,15 @@
     </servlet-mapping>
 
     <servlet>
+        <servlet-name>DeleteAccountServlet</servlet-name>
+        <servlet-class>servlets.DeleteAccountServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteAccountServlet</servlet-name>
+        <url-pattern>/delete_account</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
         <servlet-name>MasterMainPageServlet</servlet-name>
         <servlet-class>servlets.MasterMainPageServlet</servlet-class>
     </servlet>

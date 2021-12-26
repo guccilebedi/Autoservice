@@ -7,7 +7,6 @@ import utils.DBConnector;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -23,7 +22,16 @@ public class RegistrationServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) // метод get
             throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
+                final HttpSession session = request.getSession();
+                if (nonNull(session)) { // проверка того, что пользователь авторизован
+                    if (session.getAttribute("role") == Role.MANAGER) { // если менеджер - перенаправить на его главную страницу
+                        request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
+                    } else if (session.getAttribute("role") == Role.MASTER) { // если мастер - перенаправить на его главную страницу
+                        request.getRequestDispatcher("/WEB-INF/view/master_main_page.jsp").forward(request, response);
+                    }
+                } else { // иначе перенаправить на страницу входа
+                    request.getRequestDispatcher("/WEB-INF/view/login.jsp").forward(request, response);
+                }
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {  // метод post
