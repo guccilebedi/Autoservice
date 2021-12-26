@@ -14,7 +14,7 @@ public class DBQueries {
     }
 
     public static String removeCustomer() {
-        return "delete from customers_visits cv where cv.masters_id = (select e.id from employees e where e.full_name = ?) and licence_plate = ? and visit_date = to_date(?, 'DD MM YYYY')";
+        return "delete from customers_visits cv where cv.masters_id = (select e.id from employees e where e.full_name = ?) and cv.full_name = ? and licence_plate = ? and visit_date = to_date(?, 'DD MM YYYY') and price = ?";
     }
 
     public static String getCustomers() {

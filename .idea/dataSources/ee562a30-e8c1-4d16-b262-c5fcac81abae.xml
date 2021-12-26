@@ -790,11 +790,11 @@ false Zulu
     <database id="2" parent="1" name="autoservice">
       <ObjectId>16395</ObjectId>
       <Owner>autoservice</Owner>
-      <IntrospectionStateNumber>807</IntrospectionStateNumber>
+      <IntrospectionStateNumber>823</IntrospectionStateNumber>
       <Current>1</Current>
       <Relations>sequence|table|24576|24577|1
 sequence|table|24585|24586|1
-sequence|table|24594|24595|1
+sequence|table|24603|24604|1
 </Relations>
     </database>
     <database id="3" parent="1" name="postgres">
@@ -886,7 +886,7 @@ UC/10
 </Acl>
       <StateNumber>527</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>808</IntrospectionStateNumber>
+      <IntrospectionStateNumber>824</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <extension id="22" parent="2" name="plpgsql">
@@ -987,9 +987,9 @@ UC/10
       <Type>index</Type>
     </access-method>
     <sequence id="34" parent="21" name="customers_visits_id_seq">
-      <ObjectId>24594</ObjectId>
+      <ObjectId>24603</ObjectId>
       <Owner>autoservice</Owner>
-      <StateNumber>806</StateNumber>
+      <StateNumber>822</StateNumber>
       <DataType>integer|0s</DataType>
     </sequence>
     <sequence id="35" parent="21" name="employees_id_seq">
@@ -1005,9 +1005,9 @@ UC/10
       <DataType>integer|0s</DataType>
     </sequence>
     <table id="37" parent="21" name="customers_visits">
-      <ObjectId>24595</ObjectId>
+      <ObjectId>24604</ObjectId>
       <Owner>autoservice</Owner>
-      <StateNumber>806</StateNumber>
+      <StateNumber>822</StateNumber>
     </table>
     <table id="38" parent="21" name="employees">
       <ObjectId>24577</ObjectId>
@@ -1023,55 +1023,55 @@ UC/10
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>806</StateNumber>
+      <StateNumber>822</StateNumber>
       <DefaultExpression>nextval(&apos;customers_visits_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="41" parent="37" name="masters_id">
       <Position>2</Position>
       <DataType>numeric|0s</DataType>
-      <StateNumber>806</StateNumber>
+      <StateNumber>822</StateNumber>
       <TypeId>1700</TypeId>
     </column>
     <column id="42" parent="37" name="full_name">
       <Position>3</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>806</StateNumber>
+      <StateNumber>822</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="43" parent="37" name="car_make">
       <Position>4</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>806</StateNumber>
+      <StateNumber>822</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="44" parent="37" name="car_model">
       <Position>5</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>806</StateNumber>
+      <StateNumber>822</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="45" parent="37" name="licence_plate">
       <Position>6</Position>
       <DataType>varchar|0s</DataType>
-      <StateNumber>806</StateNumber>
+      <StateNumber>822</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="46" parent="37" name="visit_date">
       <Position>7</Position>
-      <DataType>varchar|0s</DataType>
-      <StateNumber>806</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>date|0s</DataType>
+      <StateNumber>822</StateNumber>
+      <TypeId>1082</TypeId>
     </column>
     <column id="47" parent="37" name="price">
       <Position>8</Position>
       <DataType>numeric|0s</DataType>
-      <StateNumber>806</StateNumber>
+      <StateNumber>822</StateNumber>
       <TypeId>1700</TypeId>
     </column>
     <index id="48" parent="37" name="customers_visits_pkey">
-      <ObjectId>24601</ObjectId>
-      <StateNumber>806</StateNumber>
+      <ObjectId>24610</ObjectId>
+      <StateNumber>822</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
@@ -1080,8 +1080,8 @@ UC/10
       <ClassIds>1978</ClassIds>
     </index>
     <key id="49" parent="37" name="customers_visits_pkey">
-      <ObjectId>24602</ObjectId>
-      <StateNumber>806</StateNumber>
+      <ObjectId>24611</ObjectId>
+      <StateNumber>822</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>customers_visits_pkey</UnderlyingIndexName>

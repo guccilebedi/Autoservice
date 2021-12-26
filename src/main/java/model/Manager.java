@@ -17,11 +17,9 @@ public class Manager extends User{
         PreparedStatement removeCustomer = connection.prepareStatement(DBQueries.removeCustomer());
         removeCustomer.setString(1, master.fullName);
         removeCustomer.setString(2, customer.fullName);
-        removeCustomer.setString(3, customer.carMake);
-        removeCustomer.setString(4, customer.carModel);
-        removeCustomer.setString(5, customer.licencePlate);
-        removeCustomer.setString(6, formatter.format(customer.date));
-        removeCustomer.setInt(7, customer.price);
+        removeCustomer.setString(3, customer.licencePlate);
+        removeCustomer.setString(4, formatter.format(customer.date));
+        removeCustomer.setInt(5, customer.price);
         removeCustomer.executeUpdate();
     }
 }

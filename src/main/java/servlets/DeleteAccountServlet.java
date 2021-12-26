@@ -23,7 +23,7 @@ public class DeleteAccountServlet extends HttpServlet {
             throws ServletException, IOException {
                 final HttpSession session = request.getSession();
                 if (nonNull(session)) { // проверка того, что пользователь авторизован
-                    if (session.getAttribute("role") == Role.MANAGER) { // если менеджер - перенаправить на его главную страницу
+                    if (session.getAttribute("role") == Role.MANAGER) { // если менеджер - перенаправить на страницу удаления аккаунта
                         request.getRequestDispatcher("/WEB-INF/view/delete_account.jsp").forward(request, response);
                     } else if (session.getAttribute("role") == Role.MASTER) { // если мастер - перенаправить на его главную страницу
                         request.getRequestDispatcher("/WEB-INF/view/master_main_page.jsp").forward(request, response);

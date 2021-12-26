@@ -58,4 +58,12 @@
         <url-pattern>/master_add_customers_visit</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>DeleteCustomersVisitServlet</servlet-name>
+        <servlet-class>servlets.DeleteCustomersVisitServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteCustomersVisitServlet</servlet-name>
+        <url-pattern>/delete_customers_visit</url-pattern>
+    </servlet-mapping>
 </web-app>

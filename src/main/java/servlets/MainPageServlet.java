@@ -30,14 +30,16 @@ public class MainPageServlet extends HttpServlet {
         final HttpSession session = request.getSession();
         if (nonNull(session)) { // проверка того, что пользователь авторизован
             if (session.getAttribute("role") == Role.MANAGER) {
-                if (request.getParameter("Register") != null) {
+                if (request.getParameter("Register") != null) { // если нажата кнопка зарегистрировать пользователя
                     request.getRequestDispatcher("/WEB-INF/view/register.jsp").forward(request, response);
-                } else if (request.getParameter("Delete") != null) {
+                } else if (request.getParameter("Delete") != null) { // если нажата кнопка удалить учётную запись
                     request.getRequestDispatcher("/WEB-INF/view/delete_account.jsp").forward(request, response);
-                } else if (request.getParameter("AddCustomer") != null) {
+                } else if (request.getParameter("AddCustomer") != null) { // если нажата кнопка добавить запись о визите клиента к мастеру
                     request.getRequestDispatcher("/WEB-INF/view/manager_add_customers_visit.jsp").forward(request, response);
+                } else if (request.getParameter("DeleteCustomer") != null) { // если нажата кнопка добавить запись о визите клиента к мастеру
+                    request.getRequestDispatcher("/WEB-INF/view/delete_customers_visit.jsp").forward(request, response);
                 }
-            } else if (session.getAttribute("role") == Role.MASTER) {
+            } else if (session.getAttribute("role") == Role.MASTER) { // если нажата кнопка добавить запись о визите клиента
                 request.getRequestDispatcher("/WEB-INF/view/master_add_customers_visit.jsp").forward(request, response);
             }
         } else { // иначе перенаправить на страницу входа
